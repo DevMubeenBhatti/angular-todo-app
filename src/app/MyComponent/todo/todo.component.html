@@ -1,0 +1,17 @@
+<p class="text-center text-primary">Todo Curd App! 
+	<br>
+	<span class="text-success bg-light border px-3">{{title}}</span>
+</p>
+
+<app-todo-add (todoAdd)="todoAdd($event)"></app-todo-add>
+<h3><u>Todo list here</u></h3>
+<!-- send data from first component to second component []="" use this attr -->
+
+<div *ngIf="this.todos.length===0; else elseBlock" class="text-danger">No Todos to Display.</div>
+<ng-template #elseBlock>
+	<div *ngFor="let todo of todos">
+		<!-- send data to other component []="" -->
+		<!-- reveive data to other component ()="function($event)" -->
+		<app-todo-items [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-items>
+	</div>
+</ng-template>

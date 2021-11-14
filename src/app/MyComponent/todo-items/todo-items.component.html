@@ -1,0 +1,29 @@
+<!-- reveive data here -->
+<!-- <ul class="list-group">
+	<li class="list-group-item d-flex justify-content-between">
+		<div>
+			<h5>{{todo.sno}}</h5>
+			<h4>{{todo.title}}</h4>
+			<p>{{todo.desc}}</p>
+			<p class="bg-primary text-light text-center">{{todo.active}}</p>
+		</div>
+		<div><Button class="btn btn-danger" (click)="onClick(todo)">Delete</Button></div>
+	</li>
+
+</ul> -->
+
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
+	<div class="card shadow-lg p-3 mb-5 bg-body rounded">
+		<div class="card-body">
+		  <div class="d-flex flex-row justify-content-between">
+			  <h6 class="card-title text-secondary">{{todo.sno}}</h6>
+			  <Button class="btn btn-sm btn-danger" (click)="onClick(todo)"><i class="fas fa-trash-alt"></i></Button>
+		  </div>
+		  <div class="card-text">
+			<h4>{{todo.title}}</h4>
+			<p>{{todo.desc}}</p>
+			<p>{{todo.active}}</p>
+		  </div>
+		</div>
+	</div>
+</div>
